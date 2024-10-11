@@ -15,7 +15,7 @@ import javax.persistence.Column;
 
 /* Annotation for Database Hibernate */
 @Entity
-@Table(name = "contact")
+@Table(name = "employees")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -85,12 +85,12 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee{" +
-                "\"id\"" +":\""+ id +"\""+
-                ", \"name\""  +":\""+ name +"\" " +
-                ", \"email\"" +":\""+ email +"\" " +
-                ", \"phone\"" +":\""+ phone +"\" " +
-                ", \"city\"" +":\""+ city +"\" " +
-                ", \"position\"" +":\""+ position +"\"" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                ", city='" + city + '\'' +
+                ", position='" + position + '\'' +
                 '}';
     }
 }

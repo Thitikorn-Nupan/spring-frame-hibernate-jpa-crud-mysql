@@ -2,86 +2,54 @@ package net.spring.coding.controller;
 
 
 import net.spring.coding.model.Employee;
-import net.spring.coding.repository.EmployeeRepository;
-import net.spring.coding.service.EmployeeService;
+import net.spring.coding.repository.ContactRepository;
+import net.spring.coding.service.ContactService;
 
 import java.util.List;
 
-
 public class Application {
-    private EmployeeRepository employeeRepository;
+
+    private ContactRepository employeeRepository;
+
     public Application () {
-
-        this.employeeRepository = new EmployeeService();
-
+        this.employeeRepository = new ContactService();
     }
 
     public void test() {
-/*
-        ///// READ return Class Object[] type Array
-        List<Object[]> rows = employeeService.read();
-        for (Object[] row : rows) {
-            Employee employee = new Employee();
-            employee.setId(Long.parseLong(row[0].toString()));
-            employee.setName((row[1].toString()));
-            employee.setEmail((row[2].toString()));
-            employee.setPhone((row[3].toString()));
-            employee.setCity((row[4].toString()));
-            employee.setPosition((row[5].toString()));
+        ///// READS
+        /*List<Employee> rows = employeeRepository.reads();
+        for (Employee employee: rows) {
             System.out.println(employee);
-*/
+        }*/
 
-
-/*
         ///// CREATE
-        Employee employee = new Employee();
-        employee.setName("Physical");
-        employee.setEmail("Physical@hotmail.com");
+        /*Employee employee = new Employee();
+        employee.setName("Phy Sical");
+        employee.setEmail("phy.sical@hotmail.com");
         employee.setPhone("0741277799");
         employee.setCity("Bangkok");
-        employee.setPosition("C++ Developer");
-        System.out.println(employeeRepository.create(employee));
-*/
+        employee.setPosition("Software Engineer");
+        System.out.println(employeeRepository.create(employee));*/
 
-
-/*
         ///// READ
-        List<Employee> employeesList = employeeRepository.read();
-        for (Employee employee : employeesList) {
-            System.out.println(employee);
-        }
-//        System.out.println(employeesList.get(0));
-//        System.out.println(employeesList.get(1));
-//        System.out.println(employeesList.get(2));
-*/
+        /*Employee employee = (Employee) employeeRepository.readById(1L);
+        System.out.println(employee);*/
 
 
-/*
-        ///// READ BY ID
-        System.out.println(employeeRepository.readById(6l));
-*/
-
-
-/*
         ///// UPDATE
-        Employee employee = new Employee();
-        employee.setName("Golang");
-        employee.setEmail("Golang@hotmail.com");
+        /*Employee employee = new Employee();
+        employee.setName("Go lang");
+        employee.setEmail("go.lang@hotmail.com");
         employee.setPhone("0888777998");
-        employee.setCity("Bangkok");
-        employee.setPosition("Basic Developer");
-        employeeRepository.update(employee,6l);
-        System.out.println(employeeRepository.readById(6l));
-*/
+        employee.setCity("Los Angeles");
+        employee.setPosition("Data Analyst");
+        employeeRepository.update(employee,5l);
+        System.out.println(employeeRepository.readById(5l));*/
 
-
-/*
         ///// DELETE
-        employeeRepository.delete(6l);
-*/
+        /*employeeRepository.delete(5l);*/
 
-/*      System.out.println(employeeRepository.readById(6l)); */
-}
+    }
     public static void main(String[] args) {
         new Application().test();
     }
