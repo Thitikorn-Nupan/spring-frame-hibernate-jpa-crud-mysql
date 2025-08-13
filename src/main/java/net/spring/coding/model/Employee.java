@@ -7,23 +7,25 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Column;
 
-/*
+/**
 
-    this class is maps to EMPLOYEE table in contact database.
-
+    This class is maps to EMPLOYEE table in  database.
+    There are Annotations for Database Hibernate
+    as @Entity ,@Table ,...
 */
-
-/* Annotation for Database Hibernate */
 @Entity
-@Table(name = "employees")
+@Table(name = "employees_3")
 public class Employee {
-    @Id
+
+    /**
+     * If we want to automatically generate the primary key value Using them. @GeneratedValue
+     * If you don't specify is setting to AUTO
+     * and "GenerationType.IDENTITY" This means they are auto-incremented.
+    */
+    @Id //  Primary Key
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    /* If we want to automatically generate the primary key value Using them. @GeneratedValue
-    *  If you don't specify is setting to AUTO
-    *  and "GenerationType.IDENTITY" This means they are auto-incremented.*/
     @Column(name = "id")
-    private Long id; /* Auto Increment , Primary Key */
+    private Long id;
     private String name;
     private String email;
     private String phone;

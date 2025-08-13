@@ -17,28 +17,23 @@
   </properties>
 
   <dependencies>
-
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-
     <!-- these are dependency for using hibernate -->
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-core</artifactId>
       <version>5.3.20.Final</version>
     </dependency>
-
     <dependency> <!-- for load diver Mysql -->
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.28</version>
     </dependency>
     <!-- these are dependency for using hibernate -->
-
-
   </dependencies>
 </project>
